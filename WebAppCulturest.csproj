@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\WebAppCulturest.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\WebAppCulturest.csproj.nuget.g.props" />
+    <None Include="obj\WebAppCulturest.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+</Project>
