@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Culturest";
+}
+
+<div style="display: flex;">
+    <div style="flex: 1;">
+        <!-- Formulario de registro de asistentes -->
+        <h2>Registrar Asistente</h2>
+        <form method="post">
+            <!-- Campos de entrada -->
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" class="form-control" id="nombres" name="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="numeroExpediente">Número de Expediente:</label>
+                <input type="number" class="form-control" id="numeroExpediente" name="numeroExpediente" required>
+            </div>
+            <div class="form-group">
+                <label for="eventoId">ID del Evento:</label>
+                <input type="number" class="form-control" id="eventoId" name="eventoId" required>
+            </div>
+            <!-- Validación de datos y mensajes de error -->
+            @if (!ModelState.IsValid)
+            {
+                <div class="alert alert-danger" role="alert">
+                    Por favor, complete todos los campos correctamente.
+                </div>
+            }
+            <!-- Botón de registro -->
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+    <div style="flex: 1;">
+        <!-- Tabla de eventos de Culturest -->
+        <h2>Eventos de Culturest</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Descripción</th>
+                    <th>Fecha y Horario</th>
+                    <th>Costo</th>
+                    <th>Lugar</th>
+                    <th>Campus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de la tabla -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Enlace a la página de Asistentes -->
+<a asp-page="Asistentes">Ver Asistentes Registrados</a>
